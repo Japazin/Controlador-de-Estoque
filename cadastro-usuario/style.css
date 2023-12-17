@@ -10,7 +10,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background-image: url(image/fundo.jpg);
+    background-image: green;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@ body{
 }
 
 form{
-    background: #fff;
+    background: #f7f7f7;
     max-width: 500px;
     height: 450px;
     padding: 40px;
@@ -36,7 +36,7 @@ form{
 form h1{
     text-align: center;
     margin-bottom: 10px;
-    color: #2D5966;
+    color: #2e7e53;
     font-size: 22pt;
 }
 
@@ -69,14 +69,14 @@ form .input-single .input{
 }
 
 form .input-single .input:focus{
-    border-bottom: 2px solid #2D5966;
+    border-bottom: 2px solid #36974a;
 }
 
 form .input-single .input:focus ~ label,
 form .input-single .input:valid ~ label{
     transform: translateY(-20px);
     font-size: 12px;
-    color: #2D5966;
+    color: #5abd8d;
 }
 
 .btn{
@@ -88,7 +88,7 @@ form input[type=submit]{
     padding: 10px 40px;
     border: 0;
     border-radius: 10px;
-    background-color: #2D5966;
+    background-color: #2d663a;
     color: #fff;
     font-size: 14pt;
     cursor: pointer;
