@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Formulário Personalizado</title>
 </head>
+
 <body>
     <section class="form-container">
         <div class="container">
-            <form>
-                <h1>Cadrastre o novo produto</h1>
+            <form action="./" method="post" enctype="multipart/form-data">
+                <h1>Cadastre o novo produto</h1>
 
                 <div class="input-single">
                     <input class="input" type="text" id="nome" required>
@@ -19,15 +21,16 @@
                 </div>
                 <div class="input-single">
                     <input class="input" type="text" id="valor" required>
-                    <label for="valor"> Valor</label>
+                    <label for="valor"> Valor</label><br>
                 </div>
-                <div class="input-single">
-                    <input class="input" type="number" id="parcelas" required>
-                    <label for="parcelas"> Quantidade de parcelas</label>
+                <div>
+                    <label for="imagem">Escolha uma imagem:</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*">
+                    <div class="btn"><input type="submit" value="Enviar"></div>
                 </div>
-                <div class="btn"><input type="submit" value="Enviar"></div>
             </form>
         </div><!--container-->
     </section>
 </body>
+
 </html>
