@@ -1,4 +1,4 @@
-function cadastroNovoProduto() {
+export default function cadastroNovo() {
     document.getElementById('myForm').addEventListener('submit', function (event) {
      event.preventDefault(); // Evita que o formulário seja enviado da maneira tradicional
 
@@ -22,4 +22,3 @@ function cadastroNovoProduto() {
  });
 
 }
-exports.cadastroNovoProduto = cadastroNovoProduto;
