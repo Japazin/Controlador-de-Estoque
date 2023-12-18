@@ -1,5 +1,5 @@
 
- function novoProduto() {
+ export default function novoProduto() {
 
     document.getElementById('myForm').addEventListener('submit', function (event) {
       event.preventDefault(); // Evita que o formulário seja enviado da maneira tradicional
