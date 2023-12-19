@@ -35,16 +35,19 @@ document.addEventListener("click", (e) => {
   function carregaPagina(el) {
     
     const href = el.getAttribute("href");
-    if(href==="./cadastro-usuario/indexCadastroUsuario.html"){
+    
+    if(href==='./cadastro-produto/indexCastroProduto.html'){
       fetch(href)
       .then(response => response.text())
       .then( html => carregaResultado(html))//carrega herf do html e implementa no <a>
       .then(produto => cadastroNovoProduto(produto)) //envia o formulário do cadastro
       .catch(e => console.log(e));
-    } else{
+    } 
+    if (href==="./usuario/indexusuario.html"){
       fetch(href)
       .then(response => response.text())
       .then( html => carregaResultado(html))
+      .then(usuario => loginUsuario(usuario))
       .catch(e => console.log(e));
     };  
   }
@@ -55,13 +58,11 @@ document.addEventListener("click", (e) => {
      // Obter os valores dos campos do formulário
      var nome = document.getElementById('nome').value;
      var valor = document.getElementById('valor').value;
-     var parcelas = document.getElementById('parcelas').value;
-
+  
      // Criar um objeto JSON com os dados do formulário
      var jsonData = {
          nome: nome,
-         valor: valor,
-         parcelas: parcelas
+         valor: valor
      };
 
      // Converter o objeto JSON em uma string JSON
@@ -73,8 +74,29 @@ document.addEventListener("click", (e) => {
 
 }
 
-
   function carregaResultado(response) {
     const result = document.querySelector(".respostabar");
     result.innerHTML = response;
   } 
+
+  function loginUsuario() {
+    document.getElementById('myForm2').addEventListener('submit', function (event) {
+     event.preventDefault(); // Evita que o formulário seja enviado da maneira tradicional
+
+     // Obter os valores dos campos do formulário
+     var nome = document.getElementById('nome').value;
+     var email = document.getElementById('email').value;
+  
+     // Criar um objeto JSON com os dados do formulário
+     var jsonData = {
+         nome: nome,
+         email: email
+     };
+
+     // Converter o objeto JSON em uma string JSON
+     var jsonString = JSON.stringify(jsonData);
+
+     // Exibir a string JSON no console (você pode enviá-la para um servidor neste ponto)
+     console.log(jsonString);
+ });
+}
