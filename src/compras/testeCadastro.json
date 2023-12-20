@@ -1,0 +1,13 @@
+[
+   {
+    "id":"1",
+        "nome":"memoria ram",
+        "valor": 200
+    },
+
+    {
+        "id":"2",
+            "nome":"memoria ram",
+            "valor": 200
+        }
+]
