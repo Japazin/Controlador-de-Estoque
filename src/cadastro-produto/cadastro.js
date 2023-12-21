@@ -1,3 +1,9 @@
+const fs = require('fs').promises;
+const path = require('path');
+const caminho = path.resolve(__dirname, './', 'jsonProdutos.json');//caminho para criar o Json para teste, simulando o recebimento do BackEnd
+
+
+
 export default function cadastroNovoProduto() {
     document.getElementById('myForm').addEventListener('submit', function (event) {
      event.preventDefault(); // Evita que o formulário seja enviado da maneira tradicional
@@ -13,10 +19,10 @@ export default function cadastroNovoProduto() {
      };
 
      // Converter o objeto JSON em uma string JSON
-     var jsonString = JSON.stringify(jsonData);
-    
+     var jsonProduct = JSON.stringify(jsonData);
+     fs.writeFile(caminho, jsonProduct, { flag: 'w' });
      // Exibir a string JSON no console (você pode enviá-la para um servidor neste ponto)
-     console.log(jsonString);
+     console.log(jsonProduct);
  });
 
 }

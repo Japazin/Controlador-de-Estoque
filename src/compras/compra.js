@@ -1,5 +1,7 @@
 export default function compra(){
-        fetch('./testeCadastro.json')
+  
+
+        fetch('testeCadastro.json')
             .then(response => response.json())
             .then(data => {
                 // Obtém o contêiner onde os produtos serão exibidos
